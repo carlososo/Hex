@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hex Guess!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1 class="titulo" id="titulo">Guess the background color hex</h1>
+        <form action="#" class="formulario">
+            <div class="campo-form">
+                <span class="input-group-addon">#</span>
+                <input type="text" id="hex" maxlength="6" minlength="3" size="7">
+            </div>
+            <div class="boton">
+
+                <!-- <input type="submit" value="Check it"> -->
+                <button id="boton-checkit">Check it</button>
+            </div>
+        </form>
+        <div id="respuesta" class="respuesta">
+            <div class="campo-color">
+                <p>Your Color:</p>
+                <div id="color-usuario" class="color-usuario"></div>
+            </div>
+            <div class="">
+                <p>Answer: <span id="span">######</span></p>
+            </div>
+            <div class="contenedor-boton">
+                <button id="boton-reset" class="boton-reset">Another</button>
+            </div>
+        </div>
+
+    </main>
+    <script src="js/javascript.js"></script>
+    <footer class="container">
+
+        <p>Este lo hice yo</p>
+    </footer>
+</body>
+
+</html>
