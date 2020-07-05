@@ -8,8 +8,8 @@
     let circulito = document.getElementById('color-usuario');
     let span = document.getElementById('span');
     let hexabackground = randomNumber();
-    let titulo = document.getElementsByTagName('h1');
-
+    // let titulo = document.getElementsByTagName('h1');
+    let tituloPrueba = document.getElementById('titulo');
     // Cambiar de color a la página mientras se lodea
     // document.body.onload = hexabackground;
 
@@ -37,14 +37,17 @@
     // console.log(colors);
     // console.log(titulo.length);
     if (colors === true) {
-        for (let i = 0; i <= titulo.length; i++) {
-            titulo[0].style.color = "#ffffff";
-        }
+        console.log(tituloPrueba)
+        tituloPrueba.style.color = "#ffffff";
+        // for (let i = 0; i <= titulo.length; i++) {
+        //     titulo[0].style.color = "#ffffff";
+        // }
 
     } else if (colors === false) {
-        for (let i = 0; i <= titulo.length; i++) {
-            titulo[0].style.color = "#000000"
-        }
+        tituloPrueba.style.color = "#000000";
+        // for (let i = 0; i <= titulo.length; i++) {
+        //     titulo[0].style.color = "#000000"
+        // }
     }
 
 
