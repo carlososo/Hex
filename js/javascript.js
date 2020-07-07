@@ -8,19 +8,15 @@
     let circulito = document.getElementById('color-usuario');
     let span = document.getElementById('span');
     let hexabackground = randomNumber();
-    // let titulo = document.getElementsByTagName('h1');
     let tituloPrueba = document.getElementById('titulo');
-    // Cambiar de color a la página mientras se lodea
-    // document.body.onload = hexabackground;
-
-    // funcion para sacar un random number entre 0 y el limite, se convierte a Hexa que ahora que lo pienso lo pude hacer con un for para RGB para sacar la distancia...pero tal vez después TBC
+    //hace el random, lo convierte a hexa y lo pasa al body
     function randomNumber() {
         let number = Math.floor(Math.random() * 16777215);
         let hexaString = Number(number).toString(16);
         document.body.style.backgroundColor = "#" + hexaString;
         return hexaString;
     }
-    //Segun entiendo si son 3 numeros los 3 numeros hacen la saturacion del RGB a ver si me sale...
+    //ejecuto el HexRGB y le paso el color de la página, hago la conversión a RGB y luego cambio las letras de colores
     document.body.onload = hexRGB(hexabackground);
 
     function hexRGB(color) {
@@ -34,26 +30,16 @@
 
 
     let colors = hexRGB(hexabackground);
-    // console.log(colors);
-    // console.log(titulo.length);
     if (colors === true) {
         console.log(tituloPrueba)
         tituloPrueba.style.color = "#ffffff";
-        // for (let i = 0; i <= titulo.length; i++) {
-        //     titulo[0].style.color = "#ffffff";
-        // }
 
     } else if (colors === false) {
         tituloPrueba.style.color = "#000000";
-        // for (let i = 0; i <= titulo.length; i++) {
-        //     titulo[0].style.color = "#000000"
-        // }
+
     }
 
-
-
-
-
+    //
     function clicked() {
         let respuestaUsuario = document.getElementById('hex');
         respuestaUsuario = respuestaUsuario.value;
@@ -70,10 +56,14 @@
     }
 
     // funcion de botones
-    botonCheck.addEventListener('click', function() {
-        clicked();
+    botonCheck.onclick = function() {
+            clicked();
 
-    })
+        }
+        // botonCheck.addEventListener('click', function() {
+        //     clicked();
+
+    // })
 
     botonAnother.addEventListener('click', function() {
         // botonCheck.style.outline = "none";
